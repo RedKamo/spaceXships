@@ -1,4 +1,4 @@
-//import React from 'react'
+/* //import React from 'react'
 import { useState , useEffect} from 'react'
 import { useRouter }  from 'next/router'
 
@@ -31,7 +31,7 @@ const shipItem = () => {
     )
 }
 
-export default shipItem;
+export default shipItem; */
 
 /*   const router = useRouter()
     const {pid} = router.query */

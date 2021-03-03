@@ -1,4 +1,4 @@
-//import { NextApiRequest, NextApiResponse } from 'next'
+/* //import { NextApiRequest, NextApiResponse } from 'next'
 import DB from '../../../database/db'
 //import shipItem from '../../product/[id]'
 
@@ -7,7 +7,7 @@ import DB from '../../../database/db'
   const db = new DB()
 
   const id = request.query.id.toString()
-  const ship = await db.getById(id)
+  const ship = await db.getById(id) */
 
   // way 1 
  /*  Response.statusCode= 200 // ok
@@ -17,8 +17,8 @@ import DB from '../../../database/db'
   //TODO: there is an easy way to do the same of the 3 lines above in 1 line:  
  
   //way 2 
-  response.status(200).json(ship)
+/*   response.status(200).json(ship)
 } 
 
 
-export default shipDetail
+export default shipDetail */

@@ -1,0 +1,22 @@
+// sass components/module imports
+
+@import 'Home.module.scss';
+@import 'Navbar.module.scss';
+
+
+//import font 
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;600;700&display=swap'); // offical font 
+//@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap'); // this is a test font 
+
+//variable font 
+$primary-font : 'Cabin', sans-serif;
+
+//general color variables
+$base-color: #0F1112;
+
+
+body{
+    background-color: $base-color;
+    //font-family: 'Cabin', sans-serif;
+    font-family: $primary-font
+}

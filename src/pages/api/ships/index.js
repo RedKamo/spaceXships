@@ -1,4 +1,4 @@
-import DB from '../../../database/db'
+/* import DB from '../../../database/db'
 
 
  const allShips= async (req, res) => {
@@ -12,4 +12,4 @@ import DB from '../../../database/db'
 } 
 
 
-export default allShips
+export default allShips */
