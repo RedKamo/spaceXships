@@ -3,37 +3,35 @@ import Navbar from '../components/Navbar/Navbar'
 
 
 //const spaceApi =  'https://rickandmortyapi.com/api/character'
-const space = 'https://api.spacexdata.com/v4/ships'
+//const space = 'https://api.spacexdata.com/v4/ships'
 
 
 export async function getServerSideProps(){
-  const res = await fetch(space)
-  const ship = await res.json()
+  const res = await fetch('https://api.spacexdata.com/v4/ships')
+  const ships = await res.json()
   return{
     props: {
-      ship
+      ships
     } 
   }
   
 }
 
-const Home =  ({ ship }) =>{
-  const  [] = ship;
-  //console.log(data);
+const Home =  ({ ships }) =>{
+  //const  [] = ship;
+  //console.log(ship);
   return(
     <div className="home">
       <Navbar/>
       <div className= "home__contain">
         <h1>SPACE X AUTONOMY AND RECOVERY SHIPS</h1>
-        {ship.map(ship =>{
-
-        const { name, image} = ship;
-       
+        {ships.map(ship =>{
+        const { name, image } = ship;
         return(
           <div className="home__ships">
-            <div className="home__ships_item">
-            <h2>{name}</h2>
-            <img src={image} alt=""/>
+            <div className="home__ships_item" >
+              <h2 >{name}</h2>
+              <img src={image} alt=""/>
             </div>
           </div>
         ) 
