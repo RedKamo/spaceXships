@@ -1,0 +1,62 @@
+
+$ship-background: #181C1F;
+$shipcard-background: #22272B;
+$secondary-color: #F0F2F4;
+.ship{
+    margin:0;
+    padding: 0;
+    max-width: 100%;
+    height: 100vh;
+    //border: 1px solid red;
+    background-color: $ship-background;
+    display: flex;
+    align-items: center;
+    //text-align: center;
+    flex-direction: column;
+
+    &__container{
+        background-color: $secondary-color;
+        width: auto;
+        //border: 1px solid blue;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        padding: 0.5em;
+        //border-radius: 8px;
+
+        img{
+            width: 420px;
+			height: 350px;
+        }
+    }
+
+    &__details{
+        //border: 1px solid red;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+
+        &__row{
+            line-height: 0em;
+            display: flex;
+            //justify-content: space-around;
+            align-items: center;
+            
+            h3{
+                width: 50%;
+            }
+            p{
+                width: 50%;
+            }
+        }
+    }
+    &__activate{
+        font-weight: bold;
+        color: green;
+    }
+    &__noactive{
+        font-weight: bold;
+        color: red;
+    }
+}

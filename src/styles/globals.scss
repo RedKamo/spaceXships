@@ -2,7 +2,7 @@
 
 @import 'Home.module.scss';
 @import 'Navbar.module.scss';
-
+@import 'Ship.module.scss';
 
 //import font 
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;600;700&display=swap'); // offical font 
@@ -16,7 +16,9 @@ $base-color: #0F1112;
 
 
 body{
+    margin: 0;
+    padding: 0;
     background-color: $base-color;
     //font-family: 'Cabin', sans-serif;
     font-family: $primary-font
-}
+} 
