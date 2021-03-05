@@ -1,5 +1,5 @@
 import Navbar from '../components/Navbar/Navbar'
-//import Link from 'next/link'
+import Link from 'next/link'
 
 
 //const spaceApi =  'https://rickandmortyapi.com/api/character'
@@ -26,17 +26,25 @@ const Home =  ({ ships }) =>{
       <div className= "home__contain">
         <h1>SPACE X AUTONOMY AND RECOVERY SHIPS</h1>
         {ships.map(ship =>{
-        const { name, image } = ship;
+        const { name, image ,id } = ship; 
+
         return(
-          <div className="home__ships">
+          <div className="home__ships" key={ship.id}>
             <div className="home__ships_item" >
-              <h2 >{name}</h2>
-              <img src={image} alt=""/>
+                <Link href="/ships/[id]" as={`/ships/${id}`}>
+                <a>
+                <h2 >{name}</h2>
+                {ship.image ? <img src={image} alt=""/> : "image not avaliable"}
+                </a>
+                </Link>
+
             </div>
           </div>
         ) 
 
         })}
+
+       
     </div>
     </div>
 
