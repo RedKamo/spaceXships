@@ -9,11 +9,17 @@ $secondary-color: #F0F2F4;
     height: 100vh;
     //border: 1px solid red;
     background-color: $ship-background;
+    //justify-content: center;
     display: flex;
     align-items: center;
     //text-align: center;
     flex-direction: column;
 
+    &__title{
+        font-size: 4.2em;
+        margin: 1em 0;
+        color:$secondary-color
+    }
     &__container{
         background-color: $secondary-color;
         width: auto;
@@ -58,5 +64,36 @@ $secondary-color: #F0F2F4;
     &__noactive{
         font-weight: bold;
         color: red;
+    }
+}
+
+@media (min-width: 768px){
+    .ship{
+
+        &__container{
+            display: inherit;
+            flex-direction: row;
+            width: 90%;
+            img{
+                width: 50%;
+            }
+        }
+        &__details{
+            display: flex;
+            width: 50%;
+            flex-direction: column;
+            margin: 0 2em;
+    
+
+        }
+    }
+}
+
+@media (min-width: 1200px){
+    .ship{
+        &__container{
+            width: 1000px;
+
+        }
     }
 }
