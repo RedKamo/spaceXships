@@ -58,18 +58,18 @@ const Ship = ({ data }) => {
             <p> {year_built} </p>
           </div>
           <div className="ship__details__row">
-            <h3>More info about:</h3>
-            <a href={link} target="_blank">
-              Additional info{" "}
-            </a>
-          </div>
-          <div className="ship__details__row">
             <h3>Active:</h3>
             {active ? (
               <p className="ship__activate">YES</p>
             ) : (
               <p className="ship__noactive">NO</p>
             )}
+          </div>
+          <div className="ship__details__row">
+            <h3>More info about:</h3>
+            <a href={link} target="_blank">
+              Additional info{" "}
+            </a>
           </div>
         </div>
       </div>

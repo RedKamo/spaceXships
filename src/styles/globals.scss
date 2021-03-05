@@ -10,15 +10,16 @@
 
 //variable font 
 $primary-font : 'Cabin', sans-serif;
-
 //general color variables
 $base-color: #0F1112;
+$light-color: #D2D6D1;
+$light-color: #DEE1E6;
 
 
 body{
     margin: 0;
     padding: 0;
-    background-color: $base-color;
+    background-color: $light-color;
     //font-family: 'Cabin', sans-serif;
     font-family: $primary-font
 } 

@@ -22,9 +22,8 @@ const Home =  ({ ships }) =>{
   //console.log(ship);
   return(
     <div className="home">
-      <Navbar/>
+      <h1>SPACE X AUTONOMY AND RECOVERY SHIPS</h1>
       <div className= "home__contain">
-        <h1>SPACE X AUTONOMY AND RECOVERY SHIPS</h1>
         {ships.map(ship =>{
         const { name, image ,id } = ship; 
 

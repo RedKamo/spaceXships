@@ -1,21 +1,25 @@
 //@import './globals.scss';
 $primary-color: #FFFFFF;
+$red-color:#E5232E;
+$ship-background: #181C1F;
+
 
 .home{
-	
   border: 1px solid blue;
   width: 100%;
   height: auto;
-    
+  
+  h1{
+	color: $ship-background;
+	text-align: center;
+}
+  
+
   &__contain{
 		display: grid;
 		justify-items: center;
 		grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 		border: 1px solid green;
-    h1{
-			color: $primary-color;
-			text-align: center;
-    }
 	} 
 	
 	&__ships{
