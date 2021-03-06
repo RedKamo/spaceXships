@@ -1,15 +1,4 @@
-//import Link from "next/link";
-
-//import "../../styles/Shipitem.module.scss";
-/* 
-
-const space = 'https://api.spacexdata.com/v4/ships'
-
-const ShipItem = ()=>{
-  return(
-    <h1>Ship Item page</h1>
-  )
-} */
+import { Router, useRouter } from "next/router";
 
 const Ship = ({ data }) => {
   //console.log("data", data);
@@ -26,7 +15,8 @@ const Ship = ({ data }) => {
     active,
   } = data;
 
-  const more = link;
+  const router = useRouter();
+
   return (
     <div className="ship">
       <h1 className="ship__title">{name}</h1>
@@ -77,6 +67,9 @@ const Ship = ({ data }) => {
           </div>
         </div>
       </div>
+      <span className="ship__back" onClick={() => router.back()}>
+        Go back
+      </span>
     </div>
   );
 };

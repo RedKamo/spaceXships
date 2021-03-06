@@ -25,6 +25,22 @@ $text-background: #F1F3F4;
         margin: 1em 0;
         color:$text-background;
     }
+
+    span{
+        background-color: $card-background;
+        color: $text-background;
+        width: 5em;
+        height: 2em;
+        cursor: pointer;
+        display: inherit;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        box-shadow: 0px 2px 6px 3px rgba(0,0,0,0.10);
+        font-weight: bolder;
+        font-size: 18px;
+        
+    }
     &__container{
         background-color: $card-background;
         width: auto;
@@ -93,6 +109,7 @@ $text-background: #F1F3F4;
         font-weight: bold;
         color: $noactive-color;
     }
+
 }
 
 @media (min-width: 768px){
