@@ -1,7 +1,6 @@
-import Navbar from '../components/Navbar/Navbar'
+//import Navbar from '../components/Navbar/Navbar'
 import Link from 'next/link'
-//import Image from 'next/image'
-
+import Footer from '../components/Footer/Footer'
 //const spaceApi =  'https://rickandmortyapi.com/api/character'
 //const space = 'https://api.spacexdata.com/v4/ships'
 
@@ -21,12 +20,12 @@ const Home =  ({ ships }) =>{
   //const  [] = ship;
   //console.log(ship);
   return(
+  <>
     <div className="home">
       <h1>SPACE X AUTONOMY AND RECOVERY SHIPS</h1>
       <div className= "home__contain">
         {ships.map(ship =>{
         const { name, image ,id } = ship; 
-
         return(
           <div className="home__ships" key={ship.id}>
             <div className="home__ships__item" >
@@ -37,18 +36,15 @@ const Home =  ({ ships }) =>{
                 </a>
                 </Link>
             </div>
-          
-
           </div>
-        ) 
-
+        )
         })}
-
-       
-    </div>
+      </div>
     </div>
 
-   
+   <Footer/> 
+
+  </>
   
   )
 }
