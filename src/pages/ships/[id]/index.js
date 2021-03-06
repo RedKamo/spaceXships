@@ -31,7 +31,11 @@ const Ship = ({ data }) => {
     <div className="ship">
       <h1 className="ship__title">{name}</h1>
       <div className="ship__container">
-        {data.image ? <img src={image} alt="" /> : "img isnt available"}
+        {data.image ? (
+          <img src={image} alt="" />
+        ) : (
+          <h3 className="ship__container__no">No available image</h3>
+        )}
         <div className="ship__details">
           <div className="ship__details__row">
             <h3>Legacy name:</h3>
@@ -66,9 +70,9 @@ const Ship = ({ data }) => {
             )}
           </div>
           <div className="ship__details__row">
-            <h3>More info about:</h3>
+            <h3>Link:</h3>
             <a href={link} target="_blank">
-              Additional info{" "}
+              More information about it{" "}
             </a>
           </div>
         </div>
