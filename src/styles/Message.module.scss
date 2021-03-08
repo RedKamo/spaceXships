@@ -1,0 +1,11 @@
+$card-background: #181C1F;
+.message{
+    background-color:$card-background;
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin: 2em;
+    font-size: 22px;
+    border-radius: 8px;
+    padding: 0 0.5em;
+}

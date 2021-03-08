@@ -1,58 +1,58 @@
 //import Navbar from '../components/Navbar/Navbar'
-import Link from 'next/link'
-import Footer from '../components/Footer/Footer'
+import Link from "next/link";
+import Footer from "../components/Footer/Footer";
+import Message from "../components/Message/Message";
 //const spaceApi =  'https://rickandmortyapi.com/api/character'
 //const space = 'https://api.spacexdata.com/v4/ships'
 
-
-export async function getServerSideProps(){
-  const res = await fetch('https://api.spacexdata.com/v4/ships')
-  const ships = await res.json()
-  return{
+export async function getServerSideProps() {
+  const res = await fetch("https://api.spacexdata.com/v4/ships");
+  const ships = await res.json();
+  return {
     props: {
-      ships
-    } 
-  }
-  
+      ships,
+    },
+  };
 }
 
-const Home =  ({ ships }) =>{
+const Home = ({ ships }) => {
   //const  [] = ship;
   //console.log(ship);
-  return(
-  <>
-    <div className="home">
-      <h1>SPACE X AUTONOMY AND RECOVERY SHIPS</h1>
-      <div className= "home__contain">
-        {ships.map(ship =>{
-        const { name, image ,id } = ship; 
-        return(
-          <div className="home__ships" key={ship.id}>
-            <div className="home__ships__item" >
-                <Link href="/ships/[id]" as={`/ships/${id}`}>
-                <a>
-                <h3>{name}</h3>
-                {ship.image ? <img src={image} alt=""/> : <h3 className="home__ships__no">No available image</h3>}
-                </a>
-                </Link>
-            </div>
-          </div>
-        )
-        })}
+  return (
+    <>
+      <div className="home">
+        <h1>SPACE X AUTONOMY AND RECOVERY SHIPS</h1>
+        <Message />
+        <div className="home__contain">
+          {ships.map((ship) => {
+            const { name, image, id } = ship;
+            return (
+              <div className="home__ships" key={ship.id}>
+                <div className="home__ships__item">
+                  <Link href="/ships/[id]" as={`/ships/${id}`}>
+                    <a>
+                      <h3>{name}</h3>
+                      {ship.image ? (
+                        <img src={image} alt="" />
+                      ) : (
+                        <h3 className="home__ships__no">No available image</h3>
+                      )}
+                    </a>
+                  </Link>
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
-    </div>
 
-   <Footer/> 
-
-  </>
-  
-  )
-}
+      <Footer />
+    </>
+  );
+};
 export default Home;
 
-
-
-  /*  <div className="home__title">
+/*  <div className="home__title">
       <h2>Space X RECOVERY SHIPS</h2>
       {results.map(result =>{
         const {id, name, image} = result
@@ -63,10 +63,7 @@ export default Home;
       })}
     </div> */
 
-
-
-
- /*  const [shipsList, setShipList] = useState([])
+/*  const [shipsList, setShipList] = useState([])
 
   useEffect(() => {
     window
@@ -94,7 +91,6 @@ export default Home;
     )
 } */
 
-
 /*  useEffect(async ()=>{
     try {
       const res = await window.fetch('/api/ships')
@@ -105,4 +101,3 @@ export default Home;
     }
   }, [])
  */
-
