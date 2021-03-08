@@ -2,6 +2,7 @@
 import Link from "next/link";
 import Footer from "../components/Footer/Footer";
 import Message from "../components/Message/Message";
+import Navbar from "../components/Navbar/Navbar";
 //const spaceApi =  'https://rickandmortyapi.com/api/character'
 //const space = 'https://api.spacexdata.com/v4/ships'
 
@@ -20,6 +21,7 @@ const Home = ({ ships }) => {
   //console.log(ship);
   return (
     <>
+      <Navbar />
       <div className="home">
         <h1>SPACE X AUTONOMY AND RECOVERY SHIPS</h1>
         <Message />

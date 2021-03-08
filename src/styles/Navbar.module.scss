@@ -1,3 +1,28 @@
+$card-background: #181C1F;
+$base-color: #22272B;
 .container{
-    border: 1px solid white;
+    display: flex;
+    width: 100%;
+    //1padding: 1em;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    //border: 1px solid red;
+    background-color: $card-background;
+
+    h3{
+        color: white;
+        font-weight: bolder;
+        cursor: pointer;
+    }
+    
+    a{
+        text-decoration: none;
+        color: white;
+        margin: 0 1em;
+        font-weight: bolder;
+        font-size: 22px;
+    }
+    
+
 }
