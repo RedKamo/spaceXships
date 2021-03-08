@@ -1,9 +1,8 @@
 /*TODO: in NEXTjs its not neccesary import react from react  */
 //import React from 'react'
 import Image from "next/image";
-import Link from "next/link";
+//import Link from "next/link";
 import Footer from "../components/Footer/Footer";
-
 import Navbar from "../components/Navbar/Navbar";
 
 const About = () => {
@@ -23,21 +22,34 @@ const About = () => {
           </p>
         </div>
         <div className="about__tech">
-          <h2>Technologies Used in this website</h2>
+          <h1>Technologies Used in this website</h1>
           <div className="about__tech__images">
-            <Image src="/next.png" width={200} height={200} />
-            <Image src="/react.png" width={200} height={140} />
-            <Image src="/vercel.png" width={200} height={120} />
+            <div className="images__item">
+              <Image src="/next.png" width={150} height={120} />
+            </div>
+            <div className="images__item">
+              <Image src="/rr.png" width={150} height={120} />
+            </div>
+            <div className="images__item">
+              <Image src="/vercel.png" width={150} height={120} />
+            </div>
           </div>
         </div>
         <div className="about__api">
-          <h2>Api used in this project</h2>
+          <h1>Api used in this project</h1>
+          <p>
+            I am not affiliated, associated, authorized, endorsed by, or in any
+            way officially connected with Space Exploration Technologies Inc
+            (SpaceX), or any of its subsidiaries or its affiliates. The names
+            SpaceX as well as related names, marks, emblems and images are
+            registered trademarks of their respective owners.
+          </p>
+          <h5>Apik link :</h5>
           <a href={apiLink} target="_blank">
-            Github api
+            Github Api
           </a>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

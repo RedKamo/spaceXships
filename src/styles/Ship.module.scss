@@ -41,6 +41,10 @@ $text-background: #F1F3F4;
         font-size: 18px;
         
     }
+
+    span:hover{
+        color: aqua;
+    }
     &__container{
         background-color: $card-background;
         width: auto;
