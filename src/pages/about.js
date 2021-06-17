@@ -1,7 +1,7 @@
 /*TODO: in NEXTjs its not neccesary import react from react  */
 //import React from 'react'
 import Image from "next/image";
-//import Link from "next/link";
+
 import Footer from "../components/Footer/Footer";
 import Navbar from "../components/Navbar/Navbar";
 
